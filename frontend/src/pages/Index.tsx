@@ -1,32 +1,44 @@
 
-import { Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import React, { useState } from 'react';
+import { useAuth } from '@/contexts/AuthContext';
+import { AuthPage } from '@/components/auth/AuthPage';
+import { Layout } from '@/components/Layout';
+import { Dashboard } from '@/components/dashboard/Dashboard';
+import { ScanResults } from '@/components/results/ScanResults';
 
 const Index = () => {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const { user } = useAuth();
+  const [currentView, setCurrentView] = useState<'dashboard' | 'results'>('dashboard');
+  const [selectedScanId, setSelectedScanId] = useState<number | null>(null);
 
-  useEffect(() => {
-    // Check if user is logged in
-    const token = localStorage.getItem('auth_token');
-    const userData = localStorage.getItem('user_data');
-    
-    if (token && userData) {
-      setUser(JSON.parse(userData));
-    }
-    setLoading(false);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
-      </div>
-    );
+  if (!user) {
+    return <AuthPage />;
   }
 
-  // Redirect to dashboard if logged in, otherwise to login
-  return user ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />;
+  const handleViewResults = (scanId: number) => {
+    setSelectedScanId(scanId);
+    setCurrentView('results');
+  };
+
+  const handleBackToDashboard = () => {
+    setCurrentView('dashboard');
+    setSelectedScanId(null);
+  };
+
+  return (
+    <Layout>
+      {currentView === 'dashboard' ? (
+        <Dashboard onViewResults={handleViewResults} />
+      ) : (
+        selectedScanId && (
+          <ScanResults 
+            scanId={selectedScanId} 
+            onBack={handleBackToDashboard} 
+          />
+        )
+      )}
+    </Layout>
+  );
 };
 
 export default Index;
