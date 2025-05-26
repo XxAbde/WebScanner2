@@ -1,0 +1,43 @@
+2025-05-25 16:37:34,093 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:11:02,928 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:13:06,429 - __main__ - ERROR - Failed to start server: View function mapping is overwriting an existing endpoint function: health_check
+2025-05-25 17:14:48,213 - __main__ - ERROR - Failed to start server: View function mapping is overwriting an existing endpoint function: health_check
+2025-05-25 17:15:07,408 - __main__ - ERROR - Failed to start server: View function mapping is overwriting an existing endpoint function: health_check
+2025-05-25 17:18:35,586 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:23:07,979 - __main__ - ERROR - Failed to start server: cannot import name 'limiter' from 'app' (/home/najah/Desktop/WebScanner/backend/app/__init__.py)
+2025-05-25 17:28:11,165 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:30:16,622 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:30:41,345 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:30:54,363 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:35:29,672 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:43:15,316 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:46:26,214 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:46:43,083 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:47:09,397 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:51:06,412 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:51:34,648 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 17:56:10,205 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:00:48,390 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:03:52,745 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:04:22,519 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:05:27,298 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:06:21,135 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:28:01,797 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:29:28,483 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:30:13,173 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:30:51,207 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:34:53,884 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:35:03,958 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:44:45,487 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:52:30,994 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:52:42,419 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:53:42,769 - werkzeug - WARNING -  * Debugger is active!
+2025-05-25 18:57:46,142 - werkzeug - WARNING -  * Debugger is active!
+2025-05-26 06:18:32,259 - werkzeug - WARNING -  * Debugger is active!
+2025-05-26 06:47:54,617 - werkzeug - WARNING -  * Debugger is active!
+2025-05-26 06:48:01,850 - werkzeug - WARNING -  * Debugger is active!
+2025-05-26 07:02:39,061 - __main__ - ERROR - Failed to start server: cannot import name 'scans_ns' from 'app.api.scans' (/home/najah/Desktop/WebScanner/backend/app/api/scans.py)
+2025-05-26 07:03:53,035 - __main__ - ERROR - Failed to start server: cannot import name 'reports_ns' from 'app.api.reports' (/home/najah/Desktop/WebScanner/backend/app/api/reports.py)
+2025-05-26 07:05:08,513 - werkzeug - WARNING -  * Debugger is active!
+2025-05-26 07:31:08,083 - werkzeug - WARNING -  * Debugger is active!
+2025-05-26 07:41:48,803 - werkzeug - WARNING -  * Debugger is active!
