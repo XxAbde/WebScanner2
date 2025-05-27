@@ -27,7 +27,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center gap-2">
             <Shield className="h-8 w-8 text-cyan-400" />
-            <h1 className="text-2xl font-bold text-white">CyberScan Pro</h1>
+            <h1 className="text-2xl font-bold text-white">WebScanner2.0</h1>
           </div>
           
           <div className="flex items-center gap-4">

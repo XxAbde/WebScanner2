@@ -34,6 +34,25 @@ class Config:
     SCAN_TIMEOUT = 300  # 5 minutes
     GUEST_SCAN_LIMIT = 3
     USER_SCAN_LIMIT = 10
+    
+    # Tool Configurations (your specified commands)
+    SCAN_TOOLS = {
+        'sqlmap': {
+            'command': 'sqlmap',
+            'args': ['-u', '{url}', '--batch', '--level=2', '--risk=1', '--output-dir={output_dir}'],
+            'timeout': 300
+        },
+        'nmap': {
+            'command': 'nmap', 
+            'args': ['-T4', '-F', '-Pn', '{target}', '-oX', '{output_file}'],
+            'timeout': 300
+        },
+        'nikto': {
+            'command': 'nikto',
+            'args': ['-h', '{url}', '-Tuning', 'x', '2', '-o', '{output_file}', '-Format', 'json'],
+            'timeout': 600
+        }
+    }
 
 class DevelopmentConfig(Config):
     DEBUG = True
@@ -46,7 +65,7 @@ class ProductionConfig(Config):
     FLASK_ENV = 'production'
     SECRET_KEY = os.environ.get('SECRET_KEY')
     JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
-    # For production, use PostgreSQL (we'll fix this later)
+    # For production, use PostgreSQL
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'postgresql://vulnuser:changeme@localhost/vulnscanner'
 
 class TestingConfig(Config):

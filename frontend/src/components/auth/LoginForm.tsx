@@ -60,7 +60,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSwitchToRegister }) => {
           </div>
           <CardTitle className="text-2xl text-white">Welcome Back</CardTitle>
           <CardDescription className="text-slate-300">
-            Sign in to your CyberScan Pro account
+            Sign in to your WebScanner account
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">

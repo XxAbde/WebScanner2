@@ -19,21 +19,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ onViewResults }) => {
     if (!user?.is_guest) {
       const mockScans: Scan[] = [
         {
-          id: 1,
-          user_id: user?.id || 1,
-          target_url: 'https://example.com',
-          status: 'completed',
-          started_at: new Date(Date.now() - 3600000).toISOString(),
-          finished_at: new Date(Date.now() - 3300000).toISOString(),
-        },
-        {
-          id: 2,
-          user_id: user?.id || 1,
-          target_url: 'https://testsite.org',
-          status: 'running',
-          started_at: new Date(Date.now() - 1800000).toISOString(),
-        },
-        {
           id: 3,
           user_id: user?.id || 1,
           target_url: 'https://vulnerable-app.com',
@@ -119,6 +104,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ onViewResults }) => {
               <div className="text-center">
                 <div className="font-medium">Nikto</div>
                 <div className="text-cyan-200">Web Vulnerabilities</div>
+              </div>
+              <div className="text-center">
+                <div className="font-medium">Wapiti</div>
+                <div className="text-cyan-200">Port Scanning</div>
+              </div>
+              <div className="text-center">
+                <div className="font-medium">Dirsearch</div>
+                <div className="text-cyan-200">Port Scanning</div>
               </div>
             </div>
           </div>

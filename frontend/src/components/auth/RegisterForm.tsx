@@ -68,7 +68,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
           </div>
           <CardTitle className="text-2xl text-white">Create Account</CardTitle>
           <CardDescription className="text-slate-300">
-            Join CyberScan Pro to secure your applications
+            Join WebScanner to secure your applications
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
